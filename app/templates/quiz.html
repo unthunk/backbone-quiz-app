@@ -1,0 +1,15 @@
+<div class="quiz">
+					<h2><%= title %></h2>
+					<div>
+						<p><%= question %></p>
+					</div>
+					
+					<form id="quiz" action="/#/results" method="post">
+
+<% _.each(answers, function(answer) { %>
+	<p><input type="radio" name="quiz-answer" id="quiz-answer-<%= answer.id %>" value="<%= answer.id %>"> <label for="quiz-answer-<%= answer.id %>"><%= answer.label %></label></p>
+<% }); %>
+
+						<p><input type="submit" value="<%= button %>" class="btn"></p>
+					</form>
+</div>
